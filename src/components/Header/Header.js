@@ -1,4 +1,4 @@
-import UserDropDown from '@/components/UserDropDown/UserDropDown.vue';
+import UserDropDown from '@/components/HeaderUserDropDown/HeaderUserDropDown.vue';
 
 export default {
   name: 'Header',

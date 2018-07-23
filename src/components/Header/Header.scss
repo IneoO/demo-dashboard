@@ -3,11 +3,65 @@
 .header {
   background: linear-gradient(to right, $first-color, $second-color);
   box-shadow: 0 0 3px grey;
+  display: flex;
   -webkit-animation: AnimationHeader 5s ease infinite;
   -moz-animation: AnimationHeader 15s ease infinite;
   animation: AnimationHeader 5s ease infinite;
   background-size: 200% 200%;
+
+  > .header-items {
+    flex-grow: 1;
+    background-color: transparent;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+
+    > .header-items--end {
+      margin-left: auto
+    }
+  }
 }
+
+.header-burger {
+  display: none;
+}
+
+.header-brand {
+  padding: 0 0.75rem;
+
+  > img {
+    max-height: none;
+  }
+}
+
+@media screen and (max-width: 1087px) {
+  .header-burger {
+    padding: 1rem .75rem;
+    position: relative;
+    display: block;
+
+    > .burger-area {
+      width: 40px;
+      height: 40px;
+      position: relative;
+      cursor: pointer;
+      > .burger-icon {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        > svg {
+          color: $fourth-color;
+          margin-top: 6px;
+          margin-left: 8px;
+        }
+        border: 2px solid $fourth-color;
+      }
+    }
+  }
+  .header-brand {
+    display: none;
+  }
+}
+
 
 .navbar-menu {
   display: flex;

@@ -1,0 +1,46 @@
+@import '../../assets/scss/main';
+
+.menu {
+  overflow-x: auto;
+  display: inline-block;
+  width: 200px;
+  height: 100%;
+  padding-top: 1rem;
+  background-color: $dark;
+  font-weight: bold;
+
+  > div {
+    > .menu-label {
+      color: $grey;
+      padding: 0 1rem;
+      font-size: 0.9rem;
+    }
+
+    > .menu-list {
+      > li {
+        > a {
+          padding-left: 2rem;
+          color: $white;
+
+          > .icon {
+            margin-right: 0.5rem;
+          }
+
+          > span {
+            vertical-align: text-bottom;
+          }
+        }
+
+        > a:hover {
+          background-color: $dark-light;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1087px) {
+  .menu {
+    display: none;
+  }
+}

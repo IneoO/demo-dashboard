@@ -1,12 +1,12 @@
 @import '../../assets/scss/main';
 
 .header {
-  background: linear-gradient(to right, $first-color, $second-color);
-  box-shadow: 0 0 3px grey;
+  background: linear-gradient(to right, $blue, $dark-blue);
+  box-shadow: 0 0 3px $grey;
   display: flex;
-  -webkit-animation: AnimationHeader 5s ease infinite;
+  -webkit-animation: AnimationHeader 15s ease infinite;
   -moz-animation: AnimationHeader 15s ease infinite;
-  animation: AnimationHeader 5s ease infinite;
+  animation: AnimationHeader 15s ease infinite;
   background-size: 200% 200%;
 
   > .header-items {
@@ -26,7 +26,7 @@
 }
 
 .header-brand {
-  padding: 0 0.75rem;
+  padding: 0 1.5rem;
 
   > img {
     max-height: none;
@@ -49,11 +49,11 @@
         height: 100%;
         border-radius: 30px;
         > svg {
-          color: $fourth-color;
+          color: $dark;
           margin-top: 6px;
           margin-left: 8px;
         }
-        border: 2px solid $fourth-color;
+        border: 2px solid $dark;
       }
     }
   }
@@ -68,17 +68,17 @@
 }
 
 @-webkit-keyframes AnimationHeader {
-    0%{background-position:0% 11%}
-    50%{background-position:100% 90%}
-    100%{background-position:0% 11%}
+  0%{background-position:0% 11%}
+  50%{background-position:100% 90%}
+  100%{background-position:0% 11%}
 }
 @-moz-keyframes AnimationHeader {
-    0%{background-position:0% 11%}
-    50%{background-position:100% 90%}
-    100%{background-position:0% 11%}
+  0%{background-position:0% 11%}
+  50%{background-position:100% 90%}
+  100%{background-position:0% 11%}
 }
 @keyframes AnimationHeader {
-    0%{background-position:0% 11%}
-    50%{background-position:100% 90%}
-    100%{background-position:0% 11%}
+  0%{background-position:0% 11%}
+  50%{background-position:100% 90%}
+  100%{background-position:0% 11%}
 }

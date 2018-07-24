@@ -10,11 +10,12 @@
     height: 100%;
     border-radius: 30px;
     > svg {
-      color: $fourth-color;
+      color: $white;
       margin-top: 6px;
       margin-left: 8px;
     }
-    border: 2px solid $fourth-color;
+    box-shadow: 0 0 3px $grey;
+    border: 2px solid $white;
   }
 }
 
@@ -45,16 +46,16 @@
   right: -9%;
   > li {
     padding: 0px;
-    line-height: 60px;
+    line-height: 40px;
     border-bottom: 1px solid rgba(215, 215, 215, 0.17);
     &:last-child {
       border-bottom: 0px;
     }
     > span {
-      font-size: 20px;
-      padding: 15px 15px 16px 10px;
+      font-size: 15px;
+      padding: 10px 10px 10px 10px;
       text-decoration: none;
-      color: $fourth-color;
+      color: $dark;
       transition: all .2s ease-out;
     }
   }
@@ -62,9 +63,9 @@
     &:before {
       content: '';
       width: 0px;
-      height: 63px;
+      height: 40px;
       position: absolute;
-      background: $first-color;
+      background: $blue;
       border-radius: 0 1px 1px 0;
       left: 0px;
       transition: all .2s ease;

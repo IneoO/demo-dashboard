@@ -1,21 +1,48 @@
 <template>
-  <aside class="menu">
-    <div v-for="menu in menus"
-      :key="menu.id">
-      <p class="menu-label">
-        {{menu.text}}
-      </p>
-      <ul class="menu-list">
-        <li v-for="submenu in menu.submenus"
-          :key="submenu.id">
-          <a>
-            <i :class="[...cssClass, submenu.icon]"></i>
-            <span>{{submenu.text}}</span>
+  <div class="full-height">
+    <aside class="menu desktop-display">
+      <div v-for="menu in menus"
+        :key="menu.id">
+        <p class="menu-label">
+          {{menu.text}}
+        </p>
+        <ul class="menu-list">
+          <li v-for="submenu in menu.submenus"
+            :key="submenu.id">
+            <a>
+              <i :class="[...cssClass, submenu.icon]"></i>
+              <span>{{submenu.text}}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <div :class="isDisplayed">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <aside class="menu mobile-display" v-clickOutside="external">
+          <a class="navbar-item header-brand" href="">
+            <img src="../../assets/img/getTech.png" alt="GetTech" width="112" height="56">
           </a>
-        </li>
-      </ul>
+          <div v-for="menu in menus"
+            :key="menu.id">
+            <p class="menu-label">
+              {{menu.text}}
+            </p>
+            <ul class="menu-list">
+              <li v-for="submenu in menu.submenus"
+                :key="submenu.id">
+                <a>
+                  <i :class="[...cssClass, submenu.icon]"></i>
+                  <span>{{submenu.text}}</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
     </div>
-  </aside>
+  </div>
 </template>
 
 <script src="./Menu.js"></script>

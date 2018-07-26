@@ -5,4 +5,9 @@ export default {
   components: {
     UserDropDown,
   },
+  methods: {
+    burgerClick() {
+      this.$emit('showMenu');
+    },
+  },
 };

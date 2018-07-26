@@ -1,8 +1,14 @@
+import clickOutside from '@/directives/clickOutside';
+
 export default {
   name: 'Menu',
   data() {
     return {
       cssClass: ['icon', 'fas'],
+      isDisplayed: {
+        modal: true,
+        'is-active': false,
+      },
       menus: [
         {
           id: 'general',
@@ -21,7 +27,7 @@ export default {
             {
               id: 'general-products',
               text: 'Products',
-              icon: 'fa-th-ul',
+              icon: 'fa-th',
             },
             {
               id: 'general-commands',
@@ -69,5 +75,30 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    displayMenu() {
+      this.isDisplayed['is-active'] = true;
+    },
+    hideMenu() {
+      this.isDisplayed['is-active'] = false;
+    },
+    external(event) {
+      if (this.isDisplayed['is-active']) {
+        let elem = event.target;
+        if (elem && elem instanceof SVGElement) {
+          elem = elem.parentNode;
+        }
+        if (elem && !~elem.className.indexOf('burger-menu')) {
+          this.hideMenu();
+        }
+      }
+    },
+  },
+  created() {
+    this.$parent.$on('showMenu', this.displayMenu);
+  },
+  directives: {
+    clickOutside,
   },
 };

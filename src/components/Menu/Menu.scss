@@ -40,7 +40,29 @@
 }
 
 @media screen and (max-width: 1087px) {
-  .menu {
+  .desktop-display {
     display: none;
+  }
+  .mobile-display {
+    padding-top: 0;
+  }
+
+  .modal-card {
+    width: 200px;
+    height: 100%;
+    max-height: none;
+    margin-left: 0;
+  }
+
+  .header-brand {
+    padding: 0 1.5rem;
+
+    > img {
+      max-height: none;
+    }
+  }
+
+  .header-brand:hover {
+    background-color: inherit;
   }
 }

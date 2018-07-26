@@ -5,9 +5,9 @@
         <img src="../../assets/img/getTech.png" alt="GetTech" width="112" height="56">
       </a>
       <div class="header-burger">
-        <div class="burger-area">
-          <div class="burger-icon">
-           <i class="icon fas fa-bars fa-lg"></i>
+        <div class="burger-area burger-menu" @click="burgerClick">
+          <div class="burger-icon burger-menu">
+           <i class="icon fas fa-bars fa-lg burger-menu"></i>
           </div>
         </div>
       </div>

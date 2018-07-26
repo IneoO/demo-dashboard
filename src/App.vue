@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- <router-view/> -->
-    <Header />
+    <Header @showMenu="showMenu"/>
     <Menu />
   </div>
 </template>
@@ -15,6 +15,11 @@ export default {
   name: 'App',
   components: {
     Menu, Header,
+  },
+  methods: {
+    showMenu() {
+      this.$emit('showMenu');
+    },
   },
 };
 </script>

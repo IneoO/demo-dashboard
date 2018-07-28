@@ -17,7 +17,7 @@
         </ul>
       </div>
     </aside>
-    <div :class="isDisplayed">
+    <div v-if="isDisplayed" class="modal">
       <div class="modal-background"></div>
       <div class="modal-card">
         <aside class="menu mobile-display" v-clickOutside="external">
@@ -31,7 +31,7 @@
             </p>
             <ul class="menu-list">
               <li v-for="submenu in menu.submenus"
-                :key="submenu.id">
+                :key="submenu.id" @click="test(submenu)">
                 <a>
                   <i :class="[...cssClass, submenu.icon]"></i>
                   <span>{{submenu.text}}</span>

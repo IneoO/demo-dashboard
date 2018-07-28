@@ -5,10 +5,7 @@ export default {
   data() {
     return {
       cssClass: ['icon', 'fas'],
-      isDisplayed: {
-        modal: true,
-        'is-active': false,
-      },
+      isDisplayed: false,
       menus: [
         {
           id: 'general',
@@ -43,7 +40,7 @@ export default {
             {
               id: 'marketing-social-medias',
               text: 'Social medias',
-              icon: 'fa-cloud',
+              icon: 'fa-share-square',
             },
             {
               id: 'marketing-advertisers',
@@ -78,15 +75,16 @@ export default {
   },
   methods: {
     displayMenu() {
-      this.isDisplayed['is-active'] = true;
+      this.isDisplayed = true;
     },
     hideMenu() {
-      this.isDisplayed['is-active'] = false;
+      this.isDisplayed = false;
     },
     external(event) {
-      if (this.isDisplayed['is-active']) {
+      if (this.isDisplayed) {
         let elem = event.target;
         if (elem && elem instanceof SVGElement) {
+          elem = elem.parentNode;
           elem = elem.parentNode;
         }
         if (elem && !~elem.className.indexOf('burger-menu')) {

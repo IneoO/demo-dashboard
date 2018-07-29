@@ -1,8 +1,12 @@
 <template>
   <div id="app">
-    <!-- <router-view/> -->
     <Header @showMenu="showMenu"/>
-    <Menu />
+    <div class="full-height">
+      <Menu />
+      <div class="container">
+        <router-view />
+      </div>
+    </div>
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="full-height">
+  <div>
     <aside class="menu desktop-display">
       <div v-for="menu in menus"
         :key="menu.id">
@@ -9,10 +9,10 @@
         <ul class="menu-list">
           <li v-for="submenu in menu.submenus"
             :key="submenu.id">
-            <a>
+            <router-link :to="submenu.href" active-class="is-active" exact>
               <i :class="[...cssClass, submenu.icon]"></i>
               <span>{{submenu.text}}</span>
-            </a>
+            </router-link>
           </li>
         </ul>
       </div>
@@ -31,11 +31,11 @@
             </p>
             <ul class="menu-list">
               <li v-for="submenu in menu.submenus"
-                :key="submenu.id" @click="test(submenu)">
-                <a>
+                :key="submenu.id">
+                <router-link v-link="submenu.href">
                   <i :class="[...cssClass, submenu.icon]"></i>
                   <span>{{submenu.text}}</span>
-                </a>
+                </router-link>
               </li>
             </ul>
           </div>

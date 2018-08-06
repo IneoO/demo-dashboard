@@ -1,13 +1,9 @@
 @import '../../assets/scss/main';
 
 .header {
-  background: linear-gradient(to right, $blue, $dark-blue);
+  background: $white;
   box-shadow: 0 0 3px $grey;
   display: flex;
-  -webkit-animation: AnimationHeader 15s ease infinite;
-  -moz-animation: AnimationHeader 15s ease infinite;
-  animation: AnimationHeader 15s ease infinite;
-  background-size: 200% 200%;
 
   > .header-items {
     flex-grow: 1;
@@ -65,20 +61,4 @@
 
 .navbar-menu {
   display: flex;
-}
-
-@-webkit-keyframes AnimationHeader {
-  0%{background-position:0% 11%}
-  50%{background-position:100% 90%}
-  100%{background-position:0% 11%}
-}
-@-moz-keyframes AnimationHeader {
-  0%{background-position:0% 11%}
-  50%{background-position:100% 90%}
-  100%{background-position:0% 11%}
-}
-@keyframes AnimationHeader {
-  0%{background-position:0% 11%}
-  50%{background-position:100% 90%}
-  100%{background-position:0% 11%}
 }
